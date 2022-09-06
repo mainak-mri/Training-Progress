@@ -9,13 +9,26 @@ End the program by reading the people (the teacher and the students) and execute
 
 
 Input:
+Press 1 for teacher and 2 for student:
+2
 Juan
+Press 1 for teacher and 2 for student:
+1
 Sara
+Press 1 for teacher and 2 for student:
+2
 Carlos
+
 Output:
-Explain
-Study
-Study
+My name is Juan
+I am a student
+I am studying
+My name is Sara
+I am a teacher
+I am explaining
+My name is Carlos
+I am a student
+I am studying
 
 Make different files for the classes.
 */
