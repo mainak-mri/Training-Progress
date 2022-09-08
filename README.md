@@ -7,4 +7,3 @@
 - [x] C#(Multidimensional arrays, method overloading, abstract classes and methods, interfaces, partial classes)
 - [x] Solved some questions on C# OOP
 - [x] Getting started with ASP.Net
-- [x] ASP.Net Web API(MVC Pattern, Registering API, Routing, Using Postman, returning resources, returning proper status code)
