@@ -39,49 +39,46 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace OOP_3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Person[] persons = new Person[3];
-            List<int> ChoiceList = new List<int>();
-            for (int i = 0; i < 3; i++)
+            //Person[] persons = new Person[];
+            var persons = new List<IJob>();
+            bool finished = false;
+            
+            // User can keep on adding inputs and then press exit to stop.
+            do
             {
                 // prompt whether you are inputting a student or a teacher
-                Console.WriteLine("Press 1 for teacher and 2 for student:");
+                Console.WriteLine("Press\n1. for teacher\n2. for student\n3. to exit:");
                 int choice = Convert.ToInt32(Console.ReadLine());
-                ChoiceList.Add(choice);
-                if (choice == 1)
+                switch (choice)
                 {
-                    persons[i] = new Teacher(Console.ReadLine());
-                }
-                else
-                {
-                    persons[i] = new Student(Console.ReadLine());
-                }
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                //prompt teacher or student
-                if (ChoiceList[i] == 1)
-                {
-                    ((Teacher)persons[i]).DisplayName();
-                    ((Teacher)persons[i]).DisplayJob();
-                    ((Teacher)persons[i]).Job();
-                    
-                    Console.ReadKey();
+                    case 1:
+                        persons.Add(new Teacher(Console.ReadLine()));
+                        break;
 
+                    case 2:
+                        persons.Add(new Student(Console.ReadLine()));
+                        break;
+                    case 3: finished = true;
+                            break;
+                    default:
+                        Console.WriteLine("Please enter correct value");
+                        break;
                 }
-                else
-                {
-                    ((Student)persons[i]).DisplayName();
-                    ((Student)persons[i]).DisplayJob();
-                    ((Student)persons[i]).Job();
-                    
-                    Console.ReadKey();
-                }
+            } while (!finished);
+         
+            for (int i = 0; i < persons.Count; i++)
+            {
+                persons[i].DisplayName();
+                persons[i].DisplayJob();
+                persons[i].Job();
+                Console.ReadKey();
             }
 
         }

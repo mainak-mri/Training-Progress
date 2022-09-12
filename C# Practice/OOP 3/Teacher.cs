@@ -11,13 +11,13 @@ namespace OOP_3
         public Teacher(string name):base(name)
         {
             //Name = name;
-           // Console.WriteLine("Teacher");
         }
-        public override void Job()
+
+        public void Job()
         {
             Console.WriteLine("I am explaining");
         }
-        public override void DisplayJob()
+        public void DisplayJob()
         {
             Console.WriteLine("I am a teacher");
         }

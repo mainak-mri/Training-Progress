@@ -10,5 +10,6 @@ namespace OOP_3
     {
         void DisplayName();
         void DisplayJob();
+        void Job();
     }
 }
